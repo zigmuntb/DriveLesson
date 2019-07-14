@@ -50,7 +50,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CollectionViewCellInfoCard.self), for: indexPath) as! CollectionViewCellInfoCard
 		let url = URL(string: dataArray[indexPath.row].avatar_url)
-		
+		cell.cardImageView.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
 		cell.cardImageView.sd_setImage(with: url, completed: nil)
 		cell.nameLabel.text = dataArray[indexPath.row].login
 		cell.reviewsScoreLabel.text = String(dataArray[indexPath.row].id)
