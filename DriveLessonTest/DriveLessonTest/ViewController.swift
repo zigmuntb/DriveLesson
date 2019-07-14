@@ -28,8 +28,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 		collectionView.dataSource = self
 		
 		collectionView.register(UINib(nibName: "CollectionViewCellInfoCard", bundle: nil), forCellWithReuseIdentifier: String(describing: CollectionViewCellInfoCard.self))
-//		InstructorButton.layer.cornerRadius = 5
-//		InstructorButton.layer.borderWidth = 1
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -71,8 +69,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 		
 		return cell
 	}
-	
-	// frame.width / 2 - 8
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		
